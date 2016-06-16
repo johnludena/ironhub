@@ -3,7 +3,7 @@ try {
 	var token = GLOBAL_TOKEN
 }
 catch (e) {
-	var token = ''
+	var token = ""
 }
 
 // Setting variables for urls
@@ -15,7 +15,7 @@ var params = {
 
 // building full urls for loading initial profile when page loads
 var genParamString = function(paramObject) {
-    if (token !== null) {
+    if (token !== "") {
     	var outputString = '?'
 	    for (var key in paramObject) {
 	     	outputString += key + '=' + paramObject[key] + '&'
@@ -38,7 +38,6 @@ var searchNode = document.querySelector("#search")
 var searchUser = function(eventObj) {
 	if (eventObj.keyCode === 13) {
 		var usernameValue = eventObj.target.value
-		console.log(usernameValue)
 		
 		var searchUserBase = "https://api.github.com/users/"
 		var searchUserFullUrl = searchUserBase + usernameValue + genParamString(params)
@@ -97,7 +96,6 @@ var elapsedTime = function(repoUpdateTime) {
 var userPromise = $.getJSON(myFullUserApiUrl)
 
 var handleUserData = function(userResponse) {
-	console.log(userResponse)
 	var name = userResponse.name
 	var blog = userResponse.blog
 	var location = userResponse.location

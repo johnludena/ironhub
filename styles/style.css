@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	background: #fff;
+}
+
+a {
+	color: #4078c0;
+	text-decoration: none;
+	/* font-size: 1.5rem; */
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#container {
+	width: 100%;
+	margin: 2% auto;
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 980px;
+}
+
+#top-bar-wrapper {
+	background: #39474e;
+	padding: 20px;
+	width: 100%;
+}
+
+#top-bar {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.logo {
+	color: #fff;
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: block;
+    text-align: center;
+   	margin-bottom: 10px;
+}
+
+#search {
+	font-size: 14px;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    width: 100%;
+    margin: 0;
+}
+
+#left-col {
+	flex: 1;
+	padding: 2em;
+}
+
+#right-col {
+	flex: 1;
+	padding: 2em;
+}
+
+.col {
+	min-height: 600px;
+	background: #fff;
+	padding: 0;
+	/* border: 1px solid #e6e6e6; */
+	border-radius: 2px;
+}
+
+.avatar {
+	max-width: 200px;
+}
+
+.repo-row {
+	border-bottom: 1px solid #eee;
+	padding: 1em 0;
+	display: flex;
+}
+
+.repo-info {
+	flex: 1;
+}
+
+.repo-row a {
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+.repo-date {
+	font-style: italic;
+	font-size: .8rem;
+	color: #adadad;
+	margin: .5rem 0;
+}
+
+.repo-meta {
+	font-size: .8rem;
+    font-weight: 700;
+}
+
+.social {
+	display: flex;
+	text-align: center;
+	margin: 2em 0;
+	border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 1em 0;
+}
+
+.social .number {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.social .text {
+	font-size: .8rem;
+    margin: 0;
+    color: #808080;
+}
+
+.social .following {
+	flex: 1;
+}
+
+.social .followers {
+	flex: 1;
+}
+
+@media screen and (min-width: 640px) {
+	#left-col {
+		flex: 1;
+	}
+
+	#right-col {
+		flex: 3;
+		margin-left: 50px;
+	}
+
+	.logo {
+	    margin-right: 9px;
+	    display: inline-block;
+	    text-align: left;
+	    vertical-align: top;
+	}
+
+	#search {
+		display: inline-block;
+		width: 250px;
+		margin: 0;
+	}
+
+}

@@ -6,8 +6,6 @@ catch (e) {
 	var token = ''
 }
 
-
-
 // Setting variables for urls
 var myApiUrl = "https://api.github.com/users/johnludena"
 var myRepoApiUrl = "https://api.github.com/users/johnludena/repos"
@@ -17,11 +15,17 @@ var params = {
 
 // building full urls for loading initial profile when page loads
 var genParamString = function(paramObject) {
-    var outputString = '?'
-    for (var key in paramObject) {
-     	outputString += key + '=' + paramObject[key] + '&'
-    }
-    return outputString.substr(0,outputString.length - 1)
+    if (token !== null) {
+    	var outputString = '?'
+	    for (var key in paramObject) {
+	     	outputString += key + '=' + paramObject[key] + '&'
+	    }
+	    return outputString.substr(0,outputString.length - 1)
+	}
+	else {
+		return token
+	}
+    
 }
 
 var myFullUserApiUrl = myApiUrl + genParamString(params)
